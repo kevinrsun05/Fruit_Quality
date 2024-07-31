@@ -31,6 +31,20 @@ struct CustomCameraView: View {
                 }
             }
             VStack {
+                HStack {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.title)
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    Spacer()
+                }
+                .background(Color.black)
+                
                 Spacer()
                 // Button to capture the photo
                 Button(action: {
